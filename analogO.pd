@@ -1,0 +1,33 @@
+#N canvas 73 161 542 618 12;
+#X msg 76 43 devices;
+#X msg 150 91 open 2;
+#X obj 103 145 send \$0-arduino;
+#X msg 161 53 close;
+#X obj 393 138 arduino 1;
+#X obj 390 183 s \$0-arduino-out;
+#X obj 393 93 r \$0-arduino;
+#X obj 103 256 r \$0-arduino-out;
+#X obj 132 308 spigot 0;
+#X msg 237 107 analogIns 0 1;
+#X obj 117 343 route analog;
+#X obj 117 391 route 0 1 2 3 4 5 6 7;
+#X obj 237 276 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 99 457 5 0 0 0 - - -;
+#X msg 398 328 pwm 11 \$1;
+#X obj 396 368 s \$0-arduino;
+#X obj 365 274 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
+-1 -1 0 1;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 6 0 4 0;
+#X connect 7 0 8 0;
+#X connect 8 0 10 0;
+#X connect 9 0 2 0;
+#X connect 10 0 11 0;
+#X connect 11 0 13 0;
+#X connect 12 0 8 1;
+#X connect 14 0 15 0;
+#X connect 16 0 14 0;

@@ -1,0 +1,37 @@
+#N canvas 628 103 886 763 10;
+#X msg 66 33 devices;
+#X msg 140 81 open 2;
+#X msg 218 88 pinMode 3 input;
+#X obj 93 135 send \$0-arduino;
+#X msg 151 43 close;
+#X obj 483 123 s \$0-arduino;
+#X msg 508 80 digital 2 \$1;
+#X obj 510 281 arduino 1;
+#X msg 331 87 pinMode 2 output;
+#X obj 117 285 route digital;
+#X obj 480 44 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 507 326 s \$0-arduino-out;
+#X obj 510 236 r \$0-arduino;
+#X obj 116 240 r \$0-arduino-out;
+#X obj 116 322 route 2 3 4 5 6 7 8 9 10 11 12 13;
+#X obj 121 374 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 153 376 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 303 28 loadbang;
+#X connect 0 0 3 0;
+#X connect 1 0 3 0;
+#X connect 2 0 3 0;
+#X connect 4 0 3 0;
+#X connect 6 0 5 0;
+#X connect 7 0 11 0;
+#X connect 8 0 3 0;
+#X connect 9 0 14 0;
+#X connect 10 0 6 0;
+#X connect 12 0 7 0;
+#X connect 13 0 9 0;
+#X connect 14 0 15 0;
+#X connect 14 1 16 0;
+#X connect 17 0 2 0;
+#X connect 17 0 8 0;
